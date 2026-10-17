@@ -14,14 +14,27 @@ export default class RandomNumberGenerator{
     }
 
     /**
+     * Set max value.
+     * 
+     * @param {*} max 
+     * @returns 
+     */
+    setMax(max) {
+        return this.setMinMax(1, max);
+    }
+
+    /**
      * Set min and max values.
      * 
      * @param {*} min 
      * @param {*} max 
+     * @returns 
      */
     setMinMax(min, max) {
         this.min = (min || min === 0 && min <= max) ? min : this.min;
         this.max = (max || max === 0 && max > min) ? max : this.max;
+
+        return this;
     }
 
     /**
