@@ -10,10 +10,16 @@ generator = new RandomNumberGenerator();
 generator.setMinMax(1, 100);
 random = generator.random();
 
-console.log("Case 1: " + generator.min + " ... " + generator.max + " --> " + random);
+console.log("Case A: " + generator.min + " ... " + generator.max + " --> " + random);
+
+const minMaxNode = document.getElementById("minMax");
+minMaxNode.innerText = "Case A: " + generator.min + " ... " + generator.max + " --> " + random;
 
 generator = new RandomNumberGenerator();
 generator.setMax(5);
 random = generator.random();
 
-console.log("Case 2: " + generator.min + " ... " + generator.max + " --> " + random);
+console.log("Case B: " + generator.min + " ... " + generator.max + " --> " + random);
+
+const maxOnlyNode = document.getElementById("maxOnly");
+maxOnlyNode.innerText = "Case B: " + generator.min + " ... " + generator.max + " --> " + random;
