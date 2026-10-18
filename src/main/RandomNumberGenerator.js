@@ -41,6 +41,6 @@ export default class RandomNumberGenerator{
      * See 'https://stackoverflow.com/a/73925748' and 'https://stackoverflow.com/a/57954429'
      */
     random() {
-        return this.min + (this.max - this.min + 1) * crypto.getRandomValues(new Uint32Array(1))[0]/2**32|0;
+        return this.min + (this.max - this.min + 1) * crypto.getRandomValues(new Uint32Array(1))[0] / 2**32 | 0;
     }
 }
